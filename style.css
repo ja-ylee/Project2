@@ -1,0 +1,120 @@
+@import url(./reset.css);
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Rubik:wght@500&display=swap');
+
+body {
+  background-color: #FEFCFA;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid black;
+  height: 103px;
+  align-items: center;
+  
+}
+
+.burger {
+  display: none;
+}
+
+.headerMenu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  border: 1px solid black;
+}
+
+.phone {
+  border: 1px solid red;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100%;
+  width: 100%;
+  margin-right: 98px;
+}
+
+.phone img {
+  width: 15px;
+  height: 15px;
+}
+
+.phone h3 {
+  margin-left: 10px;
+  font-size: 1.125em;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  color: #122659; 
+}
+
+.logotype {
+  margin: 40px 57px 40px 98px;
+  font-family: 'Rubik', sans-serif;
+  color: #122659;
+  font-size: 24px;
+}
+
+.headerNav {
+  display: flex;
+  gap: 20px;
+}
+
+.headerNavLink {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+
+@media (max-width: 1100px) {
+  .headerNav {
+    display: none;
+  }
+  header {
+    height: 81px;
+  }
+  .phone {
+    margin-right: 45px; 
+  }
+  .logotype {
+    margin-left: 25px;
+  }
+  .burger {
+    display: block;
+    width: 24px;
+    height: 12px;
+    cursor: pointer;
+    position: relative;
+    margin-left: 45px; 
+  }
+  .burger span,
+  .burger::before,
+  .burger::after{
+    position: absolute;
+    height: 15%;
+    width: 100%;
+    transition: all 0.3s ease 0s;
+    background-color: #122659;
+  }
+  
+  .burger::before,
+  .burger::after{
+    content: "";
+  }
+  
+  .burger::before {
+    top: 0;
+  }
+  
+  .burger::after {
+    bottom: 0;
+  }
+
+  .burger span {
+    top: 50%;
+    transform: scale(1) translate(0px, -50%);
+  }
+  
+}
